@@ -1,65 +1,409 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]">
+      {/* ============ HERO ============ */}
+      <section className="relative border-b border-[var(--color-border)]">
+        <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
+        <div className="relative mx-auto max-w-6xl px-6 pt-32 pb-24 md:pt-40 md:pb-32">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--color-border-strong)] bg-[var(--color-bg-elevated)] px-3 py-1 text-xs font-mono text-[var(--color-text-muted)]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] animate-pulse" />
+            NoZak Labs · Cairo
+          </div>
+
+          <h1 className="font-[family-name:var(--font-display)] text-5xl md:text-7xl font-medium tracking-tight leading-[1.05] mb-6">
+            Operational systems,
+            <br />
+            <span className="text-[var(--color-accent)]">engineered.</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+
+          <p className="max-w-2xl text-lg md:text-xl text-[var(--color-text-muted)] leading-relaxed mb-10">
+            Automation, AI integration, and workflow engineering for small
+            operations. Built solo. Shipped in weeks, not quarters.
+          </p>
+
+          <div className="flex flex-wrap gap-3">
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-md bg-[var(--color-accent)] px-5 py-3 text-sm font-medium text-black transition hover:bg-[var(--color-accent-dim)]"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              Start a project
+              <span aria-hidden>{"\u2192"}</span>
+            </a>
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#work"
+              className="inline-flex items-center gap-2 rounded-md border border-[var(--color-border-strong)] bg-transparent px-5 py-3 text-sm font-medium text-[var(--color-text)] transition hover:bg-[var(--color-bg-elevated)]"
             >
-              Learning
-            </a>{" "}
-            center.
+              See the work
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ WHAT I DO ============ */}
+      <section id="capabilities" className="border-b border-[var(--color-border)]">
+        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+          <div className="mb-16">
+            <p className="font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-3">
+              01 / Capabilities
+            </p>
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-medium tracking-tight">
+              Three things, done end-to-end.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[var(--color-border)] border border-[var(--color-border)]">
+            {[
+              {
+                num: "01",
+                title: "Automation Engineering",
+                body: "Replace manual ops work with production-grade tools. Spreadsheet sprawl, multi-person estimation processes, repetitive workflows engineered into a single system anyone on the team can run.",
+              },
+              {
+                num: "02",
+                title: "AI Integration",
+                body: "Production AI systems on top of the work you already have. LLM-backed agents, RAG over internal docs, scoring and triage pipelines. Built with hard spend caps and measurable output.",
+              },
+              {
+                num: "03",
+                title: "Systems Architecture",
+                body: "Technical advisory for early-stage products. Stack selection, data flow design, integration architecture, Pega case lifecycle for enterprise. Bring me in before you commit to the wrong foundation.",
+              },
+            ].map((item) => (
+              <div
+                key={item.num}
+                className="bg-[var(--color-bg)] p-8 transition hover:bg-[var(--color-bg-elevated)]"
+              >
+                <p className="font-mono text-xs text-[var(--color-accent)] mb-4">
+                  {item.num}
+                </p>
+                <h3 className="font-[family-name:var(--font-display)] text-xl font-medium mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
+                  {item.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============ SELECTED WORK ============ */}
+      <section id="work" className="border-b border-[var(--color-border)]">
+        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+          <div className="mb-16">
+            <p className="font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-3">
+              02 / Selected work
+            </p>
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-medium tracking-tight">
+              What shipped looks like.
+            </h2>
+          </div>
+
+          <div className="border border-[var(--color-border)] bg-[var(--color-bg-elevated)]">
+            <div className="grid grid-cols-1 md:grid-cols-3 border-b border-[var(--color-border)]">
+              <div className="p-6 border-r border-[var(--color-border)]">
+                <p className="font-mono text-xs text-[var(--color-text-dim)] mb-2">
+                  Domain
+                </p>
+                <p className="text-sm">Operations · Publishing</p>
+              </div>
+              <div className="p-6 border-r border-[var(--color-border)]">
+                <p className="font-mono text-xs text-[var(--color-text-dim)] mb-2">
+                  Timeline
+                </p>
+                <p className="text-sm">3 days to first version</p>
+              </div>
+              <div className="p-6">
+                <p className="font-mono text-xs text-[var(--color-text-dim)] mb-2">
+                  Stack
+                </p>
+                <p className="text-sm font-mono">
+                  Python · Pandas · Streamlit
+                </p>
+              </div>
+            </div>
+
+            <div className="p-8 md:p-10">
+              <h3 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-medium mb-4">
+                Cost Estimation Dashboard
+              </h3>
+              <p className="text-[var(--color-text-muted)] leading-relaxed mb-6">
+                Replaced a six-person, two-month manual estimation process at a
+                major Egyptian publishing group with a single tool driven by
+                anyone on the team. Solo build, three days to first working
+                version, plus two days of team training.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-[var(--color-border)] border border-[var(--color-border)]">
+                <div className="bg-[var(--color-bg)] p-5">
+                  <p className="font-mono text-xs text-[var(--color-text-dim)] mb-1">
+                    People replaced
+                  </p>
+                  <p className="font-[family-name:var(--font-display)] text-2xl font-medium text-[var(--color-accent)]">
+                    {"6 \u2192 1"}
+                  </p>
+                </div>
+                <div className="bg-[var(--color-bg)] p-5">
+                  <p className="font-mono text-xs text-[var(--color-text-dim)] mb-1">
+                    Cycle time
+                  </p>
+                  <p className="font-[family-name:var(--font-display)] text-2xl font-medium text-[var(--color-accent)]">
+                    {"2 mo \u2192 minutes"}
+                  </p>
+                </div>
+                <div className="bg-[var(--color-bg)] p-5">
+                  <p className="font-mono text-xs text-[var(--color-text-dim)] mb-1">
+                    Build time
+                  </p>
+                  <p className="font-[family-name:var(--font-display)] text-2xl font-medium text-[var(--color-accent)]">
+                    3 days
+                  </p>
+                </div>
+              </div>
+
+              <p className="mt-6 text-xs text-[var(--color-text-dim)] font-mono">
+                Client name withheld under NDA. Additional case studies on request.
+              </p>
+            </div>
+          </div>
+
+          {/* ---- Case 02: AI Agent Radar ---- */}
+          <div className="mt-6 border border-[var(--color-border)] bg-[var(--color-bg-elevated)]">
+            <div className="grid grid-cols-1 md:grid-cols-3 border-b border-[var(--color-border)]">
+              <div className="p-6 border-r border-[var(--color-border)]">
+                <p className="font-mono text-xs text-[var(--color-text-dim)] mb-2">
+                  Domain
+                </p>
+                <p className="text-sm">Developer Tooling · AI</p>
+              </div>
+              <div className="p-6 border-r border-[var(--color-border)]">
+                <p className="font-mono text-xs text-[var(--color-text-dim)] mb-2">
+                  Cadence
+                </p>
+                <p className="text-sm">Ongoing · 2× / week</p>
+              </div>
+              <div className="p-6">
+                <p className="font-mono text-xs text-[var(--color-text-dim)] mb-2">
+                  Stack
+                </p>
+                <p className="text-sm font-mono">
+                  Python · Haiku 4.5 · GitHub Actions · Notion
+                </p>
+              </div>
+            </div>
+
+            <div className="p-8 md:p-10">
+              <h3 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl font-medium mb-4">
+                AI Agent Radar
+              </h3>
+              <p className="text-[var(--color-text-muted)] leading-relaxed mb-6">
+                Autonomous intelligence layer that monitors seven tech sources twice
+                weekly — Hacker News, Product Hunt, GitHub Trending, TLDR AI,
+                Ben&apos;s Bites, Reddit, and the Pega Community. Claude Haiku scores
+                each item against active project context and delivers a ranked digest
+                to Notion and GitHub. No manual filtering — just signal.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-[var(--color-border)] border border-[var(--color-border)]">
+                <div className="bg-[var(--color-bg)] p-5">
+                  <p className="font-mono text-xs text-[var(--color-text-dim)] mb-1">
+                    Sources monitored
+                  </p>
+                  <p className="font-[family-name:var(--font-display)] text-2xl font-medium text-[var(--color-accent)]">
+                    7
+                  </p>
+                </div>
+                <div className="bg-[var(--color-bg)] p-5">
+                  <p className="font-mono text-xs text-[var(--color-text-dim)] mb-1">
+                    Items scored / run
+                  </p>
+                  <p className="font-[family-name:var(--font-display)] text-2xl font-medium text-[var(--color-accent)]">
+                    45+
+                  </p>
+                </div>
+                <div className="bg-[var(--color-bg)] p-5">
+                  <p className="font-mono text-xs text-[var(--color-text-dim)] mb-1">
+                    API cost
+                  </p>
+                  <p className="font-[family-name:var(--font-display)] text-2xl font-medium text-[var(--color-accent)]">
+                    ~$1 / mo
+                  </p>
+                </div>
+              </div>
+
+              <p className="mt-6 text-xs text-[var(--color-text-dim)] font-mono">
+                Open source ·{" "}
+                <a
+                  href="https://github.com/nozaklabs/ai-radar-agent"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] underline underline-offset-4"
+                >
+                  github.com/nozaklabs/ai-radar-agent
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ CONTACT ============ */}
+      <section id="contact" className="border-b border-[var(--color-border)]">
+        <div className="mx-auto max-w-3xl px-6 py-24 md:py-32">
+          <div className="mb-12">
+            <p className="font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-3">
+              03 / Contact
+            </p>
+            <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-medium tracking-tight mb-4">
+              Start a project.
+            </h2>
+            <p className="text-[var(--color-text-muted)] leading-relaxed">
+              Tell me what you&apos;re trying to ship and what&apos;s in the way.
+              I reply within 48 hours on weekdays.
+            </p>
+          </div>
+
+          <form
+            action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+            method="POST"
+            className="space-y-5"
+          >
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-2"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  className="w-full rounded-md border border-[var(--color-border-strong)] bg-[var(--color-bg-elevated)] px-4 py-3 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-dim)] focus:border-[var(--color-accent)] focus:outline-none"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-2"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  className="w-full rounded-md border border-[var(--color-border-strong)] bg-[var(--color-bg-elevated)] px-4 py-3 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-dim)] focus:border-[var(--color-accent)] focus:outline-none"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label
+                htmlFor="company"
+                className="block font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-2"
+              >
+                Company
+              </label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                className="w-full rounded-md border border-[var(--color-border-strong)] bg-[var(--color-bg-elevated)] px-4 py-3 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-dim)] focus:border-[var(--color-accent)] focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="scope"
+                className="block font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-2"
+              >
+                What kind of work?
+              </label>
+              <select
+                id="scope"
+                name="scope"
+                required
+                className="w-full rounded-md border border-[var(--color-border-strong)] bg-[var(--color-bg-elevated)] px-4 py-3 text-sm text-[var(--color-text)] focus:border-[var(--color-accent)] focus:outline-none"
+              >
+                <option value="">Select one</option>
+                <option value="automation">Automation engineering build</option>
+                <option value="ai">AI integration / agent build</option>
+                <option value="architecture">Systems architecture / advisory</option>
+                <option value="pega">Pega case lifecycle work</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label
+                htmlFor="message"
+                className="block font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-2"
+              >
+                What are you trying to ship?
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={5}
+                required
+                placeholder="Brief on the system, the bottleneck, and what success looks like."
+                className="w-full rounded-md border border-[var(--color-border-strong)] bg-[var(--color-bg-elevated)] px-4 py-3 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-dim)] focus:border-[var(--color-accent)] focus:outline-none resize-none"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="inline-flex items-center gap-2 rounded-md bg-[var(--color-accent)] px-6 py-3 text-sm font-medium text-black transition hover:bg-[var(--color-accent-dim)]"
+            >
+              Send
+              <span aria-hidden>{"\u2192"}</span>
+            </button>
+          </form>
+
+          <p className="mt-8 text-xs text-[var(--color-text-dim)] font-mono">
+            Or email directly:{" "}
+            <a
+              href="mailto:noha@nozaklabs.com"
+              className="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] underline underline-offset-4"
+            >
+              noha@nozaklabs.com
+            </a>
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* ============ FOOTER ============ */}
+      <footer>
+        <div className="mx-auto max-w-6xl px-6 py-10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <div className="flex items-center gap-3 font-mono text-xs text-[var(--color-text-dim)]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]" />
+            NoZak Labs · Cairo · MMXXVI
+          </div>
+          <div className="flex gap-6 font-mono text-xs text-[var(--color-text-dim)]">
+            <a
+              href="https://github.com/nozaklabs"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[var(--color-text-muted)] transition"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/noha-zakaria-eid"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[var(--color-text-muted)] transition"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
-      </main>
-    </div>
+      </footer>
+    </main>
   );
 }
