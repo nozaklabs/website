@@ -56,23 +56,23 @@ export default function Home() {
             {[
               {
                 num: "01",
-                title: "Automation Engineering",
-                body: "Replace manual ops work with production-grade tools. Spreadsheet sprawl, multi-person estimation processes, repetitive workflows engineered into a single system anyone on the team can run.",
+                title: "Business Architecture",
+                body: "Process and case design before code. Stakeholder discovery, current-state mapping, target operating model, and the case lifecycle that connects them. Delivered as documentation a development team can build against — Pega, custom, or hybrid. For organizations that have decided to automate but haven’t decided what.",
               },
               {
                 num: "02",
-                title: "AI Integration",
-                body: "Production AI systems on top of the work you already have. LLM-backed agents, RAG over internal docs, scoring and triage pipelines. Built with hard spend caps and measurable output.",
-              },
-              {
-                num: "03",
                 title: "Systems Architecture",
                 body: "Technical advisory for early-stage products. Stack selection, data flow design, integration architecture. Bring me in before you commit to the wrong foundation.",
               },
               {
+                num: "03",
+                title: "Automation Engineering",
+                body: "Replace manual ops work with production-grade tools. Spreadsheet sprawl, multi-person estimation processes, repetitive workflows engineered into a single system anyone on the team can run.",
+              },
+              {
                 num: "04",
-                title: "Business Architecture",
-                body: "Process and case design before code. Stakeholder discovery, current-state mapping, target operating model, and the case lifecycle that connects them. Delivered as documentation a development team can build against — Pega, custom, or hybrid. For organizations that have decided to automate but haven’t decided what.",
+                title: "AI Integration",
+                body: "Production AI systems on top of the work you already have. LLM-backed agents, RAG over internal docs, scoring and triage pipelines. Built with hard spend caps and measurable output.",
               },
             ].map((item) => (
               <div
