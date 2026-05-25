@@ -325,6 +325,28 @@ export default function Home() {
 
             <div>
               <label
+                htmlFor="budget"
+                className="block font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-2"
+              >
+                Budget range
+              </label>
+              <select
+                id="budget"
+                name="budget"
+                required
+                className="w-full rounded-md border border-[var(--color-border-strong)] bg-[var(--color-bg-elevated)] px-4 py-3 text-sm text-[var(--color-text)] focus:border-[var(--color-accent)] focus:outline-none"
+              >
+                <option value="">Select one</option>
+                <option value="under-2k">Under $2k</option>
+                <option value="2k-10k">$2k\u2013$10k</option>
+                <option value="10k-25k">$10k\u2013$25k</option>
+                <option value="25k-plus">$25k+</option>
+                <option value="exploratory">Not sure yet \u2014 exploratory</option>
+              </select>
+            </div>
+
+            <div>
+              <label
                 htmlFor="scope"
                 className="block font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-2"
               >
@@ -347,10 +369,31 @@ export default function Home() {
 
             <div>
               <label
+                htmlFor="timeline"
+                className="block font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-2"
+              >
+                Timeline
+              </label>
+              <select
+                id="timeline"
+                name="timeline"
+                required
+                className="w-full rounded-md border border-[var(--color-border-strong)] bg-[var(--color-bg-elevated)] px-4 py-3 text-sm text-[var(--color-text)] focus:border-[var(--color-accent)] focus:outline-none"
+              >
+                <option value="">Select one</option>
+                <option value="this-month">This month</option>
+                <option value="1-2-months">Next 1\u20132 months</option>
+                <option value="this-quarter">This quarter</option>
+                <option value="no-timeline">No timeline yet</option>
+              </select>
+            </div>
+
+            <div>
+              <label
                 htmlFor="message"
                 className="block font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-2"
               >
-                What are you trying to ship?
+                What are you trying to ship, and what&apos;s in the way?
               </label>
               <textarea
                 id="message"
@@ -362,16 +405,28 @@ export default function Home() {
               />
             </div>
 
+            {/* Honeypot \u2014 bots fill this, humans never see it. Formspree discards submissions where _gotcha is populated. */}
+            <input
+              type="text"
+              name="_gotcha"
+              tabIndex={-1}
+              autoComplete="off"
+              style={{ display: "none" }}
+            />
+
             <button
               type="submit"
               className="inline-flex items-center gap-2 rounded-md bg-[var(--color-accent)] px-6 py-3 text-sm font-medium text-black transition hover:bg-[var(--color-accent-dim)]"
             >
-              Send
+              Send brief
               <span aria-hidden>{"\u2192"}</span>
             </button>
           </form>
 
           <p className="mt-8 text-xs text-[var(--color-text-dim)] font-mono">
+            I reply within 48 hours on weekdays. Sunday\u2013Thursday work week, Cairo time.
+          </p>
+          <p className="mt-3 text-xs text-[var(--color-text-dim)] font-mono">
             Or email directly:{" "}
             <a
               href="mailto:noha@nozaklabs.com"
