@@ -450,6 +450,7 @@ export default function Home() {
               href="https://github.com/nozaklabs"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="NoZak Labs on GitHub"
               className="hover:text-[var(--color-text-muted)] transition"
             >
               GitHub
@@ -458,6 +459,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/noha-zakaria-eid"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Noha Zakaria on LinkedIn"
               className="hover:text-[var(--color-text-muted)] transition"
             >
               LinkedIn
