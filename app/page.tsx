@@ -48,11 +48,11 @@ export default function Home() {
               01 / Capabilities
             </p>
             <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-medium tracking-tight">
-              Three things, done end-to-end.
+              Four tracks, done end-to-end.
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[var(--color-border)] border border-[var(--color-border)]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[var(--color-border)] border border-[var(--color-border)]">
             {[
               {
                 num: "01",
@@ -67,7 +67,12 @@ export default function Home() {
               {
                 num: "03",
                 title: "Systems Architecture",
-                body: "Technical advisory for early-stage products. Stack selection, data flow design, integration architecture, Pega case lifecycle for enterprise. Bring me in before you commit to the wrong foundation.",
+                body: "Technical advisory for early-stage products. Stack selection, data flow design, integration architecture. Bring me in before you commit to the wrong foundation.",
+              },
+              {
+                num: "04",
+                title: "Pega Case Lifecycle",
+                body: "Certified Pega Business Architect with production deployments in banking and government. Connect REST/SOAP integrations, SLA routing, data pages, decision tables, flow rules, and activities. Available for enterprise case management builds or ongoing production support.",
               },
             ].map((item) => (
               <div
