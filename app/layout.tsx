@@ -34,16 +34,14 @@ export const metadata: Metadata = {
     url: "https://nozaklabs.com",
     siteName: "NoZak Labs",
     type: "website",
-    // TODO: add og:image — create /public/og.png (1200×630) and uncomment:
-    // images: [{ url: "/og.png", width: 1200, height: 630, alt: "NoZak Labs" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "NoZak Labs" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "NoZak Labs — Operational systems, engineered.",
     description:
       "Cairo-based automation, AI integration, Pega case lifecycle, and systems engineering.",
-    // TODO: add twitter:image — create /public/og.png and uncomment:
-    // images: ["/og.png"],
+    images: ["/og.png"],
   },
 };
 
