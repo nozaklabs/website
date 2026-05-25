@@ -45,7 +45,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <div className="mb-16">
             <p className="font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-3">
-              01 / Capabilities
+              Capabilities
             </p>
             <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-medium tracking-tight">
               Four tracks, done end-to-end.
@@ -56,23 +56,23 @@ export default function Home() {
             {[
               {
                 num: "01",
-                title: "Automation Engineering",
-                body: "Replace manual ops work with production-grade tools. Spreadsheet sprawl, multi-person estimation processes, repetitive workflows engineered into a single system anyone on the team can run.",
+                title: "Business Architecture",
+                body: "Process and case design before code. Stakeholder discovery, current-state mapping, target operating model, and the case lifecycle that connects them. Delivered as documentation a development team can build against — Pega, custom, or hybrid. For organizations that have decided to automate but haven’t decided what.",
               },
               {
                 num: "02",
-                title: "AI Integration",
-                body: "Production AI systems on top of the work you already have. LLM-backed agents, RAG over internal docs, scoring and triage pipelines. Built with hard spend caps and measurable output.",
-              },
-              {
-                num: "03",
                 title: "Systems Architecture",
                 body: "Technical advisory for early-stage products. Stack selection, data flow design, integration architecture. Bring me in before you commit to the wrong foundation.",
               },
               {
+                num: "03",
+                title: "Automation Engineering",
+                body: "Replace manual ops work with production-grade tools. Spreadsheet sprawl, multi-person estimation processes, repetitive workflows engineered into a single system anyone on the team can run.",
+              },
+              {
                 num: "04",
-                title: "Pega Case Lifecycle",
-                body: "Certified Pega Business Architect with hands-on case lifecycle work in banking and government. Connect REST/SOAP integrations, SLA routing, data pages, decision tables, flow rules, activities, and production support. Available for enterprise case management builds or ongoing support.",
+                title: "AI Integration",
+                body: "Production AI systems on top of the work you already have. LLM-backed agents, RAG over internal docs, scoring and triage pipelines. Built with hard spend caps and measurable output.",
               },
             ].map((item) => (
               <div
@@ -99,7 +99,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <div className="mb-16">
             <p className="font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-3">
-              02 / Selected work
+              Selected work
             </p>
             <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-medium tracking-tight">
               What shipped looks like.
@@ -259,7 +259,7 @@ export default function Home() {
         <div className="mx-auto max-w-3xl px-6 py-24 md:py-32">
           <div className="mb-12">
             <p className="font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-3">
-              03 / Contact
+              Contact
             </p>
             <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-medium tracking-tight mb-4">
               Start a project.
@@ -338,10 +338,10 @@ export default function Home() {
               >
                 <option value="">Select one</option>
                 <option value="under-2k">Under $2k</option>
-                <option value="2k-10k">$2k\u2013$10k</option>
-                <option value="10k-25k">$10k\u2013$25k</option>
+                <option value="2k-10k">$2k–$10k</option>
+                <option value="10k-25k">$10k–$25k</option>
                 <option value="25k-plus">$25k+</option>
-                <option value="exploratory">Not sure yet \u2014 exploratory</option>
+                <option value="exploratory">Not sure yet — exploratory</option>
               </select>
             </div>
 
@@ -382,7 +382,7 @@ export default function Home() {
               >
                 <option value="">Select one</option>
                 <option value="this-month">This month</option>
-                <option value="1-2-months">Next 1\u20132 months</option>
+                <option value="1-2-months">Next 1–2 months</option>
                 <option value="this-quarter">This quarter</option>
                 <option value="no-timeline">No timeline yet</option>
               </select>
@@ -405,7 +405,7 @@ export default function Home() {
               />
             </div>
 
-            {/* Honeypot \u2014 bots fill this, humans never see it. Formspree discards submissions where _gotcha is populated. */}
+            {/* Honeypot — bots fill this, humans never see it. Formspree discards submissions where _gotcha is populated. */}
             <input
               type="text"
               name="_gotcha"
@@ -424,7 +424,7 @@ export default function Home() {
           </form>
 
           <p className="mt-8 text-xs text-[var(--color-text-dim)] font-mono">
-            I reply within 48 hours on weekdays. Sunday\u2013Thursday work week, Cairo time.
+            I reply within 48 hours on weekdays. Sunday–Thursday work week, Cairo time.
           </p>
           <p className="mt-3 text-xs text-[var(--color-text-dim)] font-mono">
             Or email directly:{" "}
@@ -456,10 +456,10 @@ export default function Home() {
               GitHub
             </a>
             <a
-              href="https://www.linkedin.com/in/noha-zakaria-eid"
+              href="https://www.linkedin.com/company/nozaklabs/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Noha Zakaria on LinkedIn"
+              aria-label="NoZak Labs on LinkedIn"
               className="hover:text-[var(--color-text-muted)] transition"
             >
               LinkedIn
