@@ -17,9 +17,9 @@ export default function Home() {
           </h1>
 
           <p className="max-w-2xl text-lg md:text-xl text-[var(--color-text-muted)] leading-relaxed mb-10">
-            Cairo-based engineering for small operations. Replaced a
-            six-person, two-month estimation process at a major Egyptian
-            publishing group in three days. That&apos;s the bar.
+            Cairo-based engineering for small operations. Three days to
+            replace a six-person, two-month estimation process at a major
+            Egyptian publishing group.
           </p>
 
           <div className="flex flex-wrap gap-3">
@@ -72,7 +72,7 @@ export default function Home() {
               {
                 num: "04",
                 title: "Pega Case Lifecycle",
-                body: "Certified Pega Business Architect with production deployments in banking and government. Connect REST/SOAP integrations, SLA routing, data pages, decision tables, flow rules, and activities. Available for enterprise case management builds or ongoing production support.",
+                body: "Certified Pega Business Architect with hands-on case lifecycle work in banking and government. Connect REST/SOAP integrations, SLA routing, data pages, decision tables, flow rules, activities, and production support. Available for enterprise case management builds or ongoing support.",
               },
             ].map((item) => (
               <div
