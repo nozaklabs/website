@@ -16,10 +16,14 @@ export default function Home() {
             <span className="text-[var(--color-accent)]">engineered.</span>
           </h1>
 
-          <p className="max-w-2xl text-lg md:text-xl text-[var(--color-text-muted)] leading-relaxed mb-10">
-            Cairo-based engineering for small operations. Three days to
-            replace a six-person, two-month estimation process at a major
-            Egyptian publishing group.
+          <p className="max-w-2xl text-lg md:text-xl text-[var(--color-text-muted)] leading-relaxed mb-4">
+            Senior engineering for teams automating real operations. From
+            process design through production systems — Cairo-based, in
+            weeks not quarters.
+          </p>
+
+          <p className="font-mono text-sm text-[var(--color-text-dim)] mb-10">
+            6 people replaced · 2 months → minutes · 3 days to first version
           </p>
 
           <div className="flex flex-wrap gap-3">
