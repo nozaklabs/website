@@ -456,10 +456,10 @@ export default function Home() {
               GitHub
             </a>
             <a
-              href="https://www.linkedin.com/in/noha-zakaria-eid"
+              href="https://www.linkedin.com/company/nozaklabs/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Noha Zakaria on LinkedIn"
+              aria-label="NoZak Labs on LinkedIn"
               className="hover:text-[var(--color-text-muted)] transition"
             >
               LinkedIn
