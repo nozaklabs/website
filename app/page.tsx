@@ -71,8 +71,8 @@ export default function Home() {
               },
               {
                 num: "04",
-                title: "Pega Case Lifecycle",
-                body: "Scoped Pega work that doesn't require staffing a delivery team. Integration builds (Connect REST/SOAP), rule and flow reviews on existing applications, SLA and routing logic, data page design, and production support engagements. For teams that need senior Pega judgment on a defined deliverable, not a six-month team build.",
+                title: "Business Architecture",
+                body: "Process and case design before code. Stakeholder discovery, current-state mapping, target operating model, and the case lifecycle that connects them. Delivered as documentation a development team can build against — Pega, custom, or hybrid. For organizations that have decided to automate but haven’t decided what.",
               },
             ].map((item) => (
               <div
