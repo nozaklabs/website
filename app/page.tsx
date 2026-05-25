@@ -338,10 +338,10 @@ export default function Home() {
               >
                 <option value="">Select one</option>
                 <option value="under-2k">Under $2k</option>
-                <option value="2k-10k">$2k\u2013$10k</option>
-                <option value="10k-25k">$10k\u2013$25k</option>
+                <option value="2k-10k">$2k–$10k</option>
+                <option value="10k-25k">$10k–$25k</option>
                 <option value="25k-plus">$25k+</option>
-                <option value="exploratory">Not sure yet \u2014 exploratory</option>
+                <option value="exploratory">Not sure yet — exploratory</option>
               </select>
             </div>
 
@@ -382,7 +382,7 @@ export default function Home() {
               >
                 <option value="">Select one</option>
                 <option value="this-month">This month</option>
-                <option value="1-2-months">Next 1\u20132 months</option>
+                <option value="1-2-months">Next 1–2 months</option>
                 <option value="this-quarter">This quarter</option>
                 <option value="no-timeline">No timeline yet</option>
               </select>
@@ -405,7 +405,7 @@ export default function Home() {
               />
             </div>
 
-            {/* Honeypot \u2014 bots fill this, humans never see it. Formspree discards submissions where _gotcha is populated. */}
+            {/* Honeypot — bots fill this, humans never see it. Formspree discards submissions where _gotcha is populated. */}
             <input
               type="text"
               name="_gotcha"
@@ -424,7 +424,7 @@ export default function Home() {
           </form>
 
           <p className="mt-8 text-xs text-[var(--color-text-dim)] font-mono">
-            I reply within 48 hours on weekdays. Sunday\u2013Thursday work week, Cairo time.
+            I reply within 48 hours on weekdays. Sunday–Thursday work week, Cairo time.
           </p>
           <p className="mt-3 text-xs text-[var(--color-text-dim)] font-mono">
             Or email directly:{" "}
