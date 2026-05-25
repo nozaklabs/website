@@ -45,7 +45,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <div className="mb-16">
             <p className="font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-3">
-              01 / Capabilities
+              Capabilities
             </p>
             <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-medium tracking-tight">
               Four tracks, done end-to-end.
@@ -99,7 +99,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <div className="mb-16">
             <p className="font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-3">
-              02 / Selected work
+              Selected work
             </p>
             <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-medium tracking-tight">
               What shipped looks like.
@@ -259,7 +259,7 @@ export default function Home() {
         <div className="mx-auto max-w-3xl px-6 py-24 md:py-32">
           <div className="mb-12">
             <p className="font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-3">
-              03 / Contact
+              Contact
             </p>
             <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-medium tracking-tight mb-4">
               Start a project.
