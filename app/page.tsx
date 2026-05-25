@@ -17,8 +17,9 @@ export default function Home() {
           </h1>
 
           <p className="max-w-2xl text-lg md:text-xl text-[var(--color-text-muted)] leading-relaxed mb-10">
-            Automation, AI integration, and workflow engineering for small
-            operations. Built solo. Shipped in weeks, not quarters.
+            Cairo-based engineering for small operations. Replaced a
+            six-person, two-month estimation process at a major Egyptian
+            publishing group in three days. That&apos;s the bar.
           </p>
 
           <div className="flex flex-wrap gap-3">
