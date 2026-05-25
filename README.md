@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NoZak Labs — nozaklabs.com
 
-## Getting Started
+**Live at https://nozaklabs.com**
 
-First, run the development server:
+Marketing and portfolio site for NoZak Labs, Noha Zakaria's solo engineering consultancy
+based in Cairo. Services: automation engineering, AI integration, systems architecture,
+and Pega case lifecycle development.
+
+<!-- TODO: Update the GitHub repo "About" field to point to https://nozaklabs.com (currently shows the Vercel preview URL). Edit it at https://github.com/nozaklabs/website → ⚙ → "About". -->
+
+---
+
+## Stack
+
+| Layer | Choice |
+|---|---|
+| Framework | Next.js (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 — `@import "tailwindcss"` + `@theme` block, no config file |
+| Fonts | Space Grotesk (display), Inter (body), Geist Mono (mono) via `next/font/google` |
+| Analytics | Vercel Analytics |
+| Contact form | Formspree (`/f/mlgvwzow`) |
+| Deploy | Vercel — auto-deploys from `main` |
+
+---
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build   # production build
+npm run lint    # ESLint
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+  layout.tsx        # Root layout — fonts, metadata, Nav, Analytics
+  page.tsx          # Single-page site (Hero, Capabilities, Work, Contact, Footer)
+  globals.css       # Tailwind v4 theme tokens + base styles
+  components/
+    Nav.tsx         # Fixed nav with scroll-activated backdrop blur ('use client')
+public/
+  # Static assets
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Vercel auto-deploys every push to `main`. No manual steps required.
+Environment variables: none currently required.

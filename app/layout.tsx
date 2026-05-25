@@ -25,15 +25,25 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "NoZak Labs — Operational systems, engineered.",
   description:
-    "Automation, AI integration, and systems engineering for small operations. Built solo. Shipped in weeks.",
+    "Cairo-based automation, AI integration, Pega case lifecycle, and systems engineering. Solo build. Shipped in weeks.",
   metadataBase: new URL("https://nozaklabs.com"),
   openGraph: {
-    title: "NoZak Labs",
+    title: "NoZak Labs — Operational systems, engineered.",
     description:
-      "Automation, AI integration, and systems engineering for small operations.",
+      "Cairo-based automation, AI integration, Pega case lifecycle, and systems engineering.",
     url: "https://nozaklabs.com",
     siteName: "NoZak Labs",
     type: "website",
+    // TODO: add og:image — create /public/og.png (1200×630) and uncomment:
+    // images: [{ url: "/og.png", width: 1200, height: 630, alt: "NoZak Labs" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NoZak Labs — Operational systems, engineered.",
+    description:
+      "Cairo-based automation, AI integration, Pega case lifecycle, and systems engineering.",
+    // TODO: add twitter:image — create /public/og.png and uncomment:
+    // images: ["/og.png"],
   },
 };
 

@@ -443,7 +443,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 py-10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div className="flex items-center gap-3 font-mono text-xs text-[var(--color-text-dim)]">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]" />
-            NoZak Labs · Cairo · MMXXVI
+            NoZak Labs · Cairo · 2026
           </div>
           <div className="flex gap-6 font-mono text-xs text-[var(--color-text-dim)]">
             <a
