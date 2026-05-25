@@ -17,8 +17,9 @@ export default function Home() {
           </h1>
 
           <p className="max-w-2xl text-lg md:text-xl text-[var(--color-text-muted)] leading-relaxed mb-10">
-            Automation, AI integration, and workflow engineering for small
-            operations. Built solo. Shipped in weeks, not quarters.
+            Cairo-based engineering for small operations. Three days to
+            replace a six-person, two-month estimation process at a major
+            Egyptian publishing group.
           </p>
 
           <div className="flex flex-wrap gap-3">
@@ -47,11 +48,11 @@ export default function Home() {
               01 / Capabilities
             </p>
             <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-medium tracking-tight">
-              Three things, done end-to-end.
+              Four tracks, done end-to-end.
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[var(--color-border)] border border-[var(--color-border)]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[var(--color-border)] border border-[var(--color-border)]">
             {[
               {
                 num: "01",
@@ -66,7 +67,12 @@ export default function Home() {
               {
                 num: "03",
                 title: "Systems Architecture",
-                body: "Technical advisory for early-stage products. Stack selection, data flow design, integration architecture, Pega case lifecycle for enterprise. Bring me in before you commit to the wrong foundation.",
+                body: "Technical advisory for early-stage products. Stack selection, data flow design, integration architecture. Bring me in before you commit to the wrong foundation.",
+              },
+              {
+                num: "04",
+                title: "Pega Case Lifecycle",
+                body: "Certified Pega Business Architect with hands-on case lifecycle work in banking and government. Connect REST/SOAP integrations, SLA routing, data pages, decision tables, flow rules, activities, and production support. Available for enterprise case management builds or ongoing support.",
               },
             ].map((item) => (
               <div
@@ -319,6 +325,28 @@ export default function Home() {
 
             <div>
               <label
+                htmlFor="budget"
+                className="block font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-2"
+              >
+                Budget range
+              </label>
+              <select
+                id="budget"
+                name="budget"
+                required
+                className="w-full rounded-md border border-[var(--color-border-strong)] bg-[var(--color-bg-elevated)] px-4 py-3 text-sm text-[var(--color-text)] focus:border-[var(--color-accent)] focus:outline-none"
+              >
+                <option value="">Select one</option>
+                <option value="under-2k">Under $2k</option>
+                <option value="2k-10k">$2k\u2013$10k</option>
+                <option value="10k-25k">$10k\u2013$25k</option>
+                <option value="25k-plus">$25k+</option>
+                <option value="exploratory">Not sure yet \u2014 exploratory</option>
+              </select>
+            </div>
+
+            <div>
+              <label
                 htmlFor="scope"
                 className="block font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-2"
               >
@@ -341,10 +369,31 @@ export default function Home() {
 
             <div>
               <label
+                htmlFor="timeline"
+                className="block font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-2"
+              >
+                Timeline
+              </label>
+              <select
+                id="timeline"
+                name="timeline"
+                required
+                className="w-full rounded-md border border-[var(--color-border-strong)] bg-[var(--color-bg-elevated)] px-4 py-3 text-sm text-[var(--color-text)] focus:border-[var(--color-accent)] focus:outline-none"
+              >
+                <option value="">Select one</option>
+                <option value="this-month">This month</option>
+                <option value="1-2-months">Next 1\u20132 months</option>
+                <option value="this-quarter">This quarter</option>
+                <option value="no-timeline">No timeline yet</option>
+              </select>
+            </div>
+
+            <div>
+              <label
                 htmlFor="message"
                 className="block font-mono text-xs uppercase tracking-widest text-[var(--color-text-dim)] mb-2"
               >
-                What are you trying to ship?
+                What are you trying to ship, and what&apos;s in the way?
               </label>
               <textarea
                 id="message"
@@ -356,16 +405,28 @@ export default function Home() {
               />
             </div>
 
+            {/* Honeypot \u2014 bots fill this, humans never see it. Formspree discards submissions where _gotcha is populated. */}
+            <input
+              type="text"
+              name="_gotcha"
+              tabIndex={-1}
+              autoComplete="off"
+              style={{ display: "none" }}
+            />
+
             <button
               type="submit"
               className="inline-flex items-center gap-2 rounded-md bg-[var(--color-accent)] px-6 py-3 text-sm font-medium text-black transition hover:bg-[var(--color-accent-dim)]"
             >
-              Send
+              Send brief
               <span aria-hidden>{"\u2192"}</span>
             </button>
           </form>
 
           <p className="mt-8 text-xs text-[var(--color-text-dim)] font-mono">
+            I reply within 48 hours on weekdays. Sunday\u2013Thursday work week, Cairo time.
+          </p>
+          <p className="mt-3 text-xs text-[var(--color-text-dim)] font-mono">
             Or email directly:{" "}
             <a
               href="mailto:noha@nozaklabs.com"
@@ -382,13 +443,14 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 py-10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div className="flex items-center gap-3 font-mono text-xs text-[var(--color-text-dim)]">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)]" />
-            NoZak Labs · Cairo · MMXXVI
+            NoZak Labs · Cairo · 2026
           </div>
           <div className="flex gap-6 font-mono text-xs text-[var(--color-text-dim)]">
             <a
               href="https://github.com/nozaklabs"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="NoZak Labs on GitHub"
               className="hover:text-[var(--color-text-muted)] transition"
             >
               GitHub
@@ -397,6 +459,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/noha-zakaria-eid"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Noha Zakaria on LinkedIn"
               className="hover:text-[var(--color-text-muted)] transition"
             >
               LinkedIn
