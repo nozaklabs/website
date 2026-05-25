@@ -72,7 +72,7 @@ export default function Home() {
               {
                 num: "04",
                 title: "Pega Case Lifecycle",
-                body: "Certified Pega Business Architect with hands-on case lifecycle work in banking and government. Connect REST/SOAP integrations, SLA routing, data pages, decision tables, flow rules, activities, and production support. Available for enterprise case management builds or ongoing support.",
+                body: "Scoped Pega work that doesn't require staffing a delivery team. Integration builds (Connect REST/SOAP), rule and flow reviews on existing applications, SLA and routing logic, data page design, and production support engagements. For teams that need senior Pega judgment on a defined deliverable, not a six-month team build.",
               },
             ].map((item) => (
               <div
